@@ -47,7 +47,7 @@ that:**
 
 **9. Control the *DC-Motor speed using PWM signal* generated from *Timer0.***
 
-### 10. Check this video: https://youtu.be/RFQGjcikfK4
+**10. Check this video: https://youtu.be/RFQGjcikfK4**
 
 **11. The project should be design and implemented based on the layered architecture 
 model as follow:**
@@ -62,14 +62,16 @@ model as follow:**
 >void ADC_init(const ADC_ConfigType * Config_Ptr)
 >
 >3. The ADC_ConfigType structure should be declared like that:
+>   
 > typedef struct{
 >  ADC_ReferenceVolatge ref_volt;
 >  ADC_Prescaler prescaler;
 > }ADC_ConfigType;
+>
 > ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
 > Check the target datasheet to gets the values.
 >
->4. ADC driver should configure to operate using the internal reference voltage 2.56 
+>5. ADC driver should configure to operate using the internal reference voltage 2.56 
 >voltage and prescaler F_CPU/8.
 
 
