@@ -41,28 +41,39 @@ temperature value, the microcontroller will drive the fan like that:**
 on temperature value. The DC-Motor rotates in clock-wise direction or stopped based on 
 the fan state.**
 
-8. The LCD should display the temperature value and the fan state continuously like 
-that:
-9. Control the DC-Motor speed using PWM signal generated from Timer0.
-10. Check this video: https://youtu.be/RFQGjcikfK4
-11. The project should be design and implemented based on the layered architecture 
-model as follow:
-ADC Driver Requirements
-1. Implement a full ADC driver with the configuration technique based on the polling
-design. You need to modify the ADC_init function implemented in the ADC session to 
-take a pointer to the configuration structure with type ADC_ConfigType.
-2. The function declaration should be:
-void ADC_init(const ADC_ConfigType * Config_Ptr)
-3. The ADC_ConfigType structure should be declared like that:
-typedef struct{
- ADC_ReferenceVolatge ref_volt;
- ADC_Prescaler prescaler;
-}ADC_ConfigType;
-ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
-Check the target datasheet to gets the values.
-4. ADC driver should configure to operate using the internal reference voltage 2.56 
-voltage and prescaler F_CPU/8.
-GPIO Driver Requirements
+**8. The LCD should display the temperature value and the fan state continuously like 
+that:**
+<img width="324" alt="temp" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/6009a923-201c-4e3e-b0c9-1a53fb749584">
+
+**9. Control the *DC-Motor speed using PWM signal* generated from *Timer0.***
+
+### 10. Check this video: https://youtu.be/RFQGjcikfK4
+
+**11. The project should be design and implemented based on the layered architecture 
+model as follow:**
+<img width="519" alt="layer" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/8357daa2-89ba-4105-a428-25e49cda18f3">
+
+**ADC Driver Requirements**
+>1. Implement a full ADC driver with the configuration technique based on the polling
+>design. You need to modify the ADC_init function implemented in the ADC session to 
+>take a pointer to the configuration structure with type ADC_ConfigType.
+>
+>2. The function declaration should be:
+>void ADC_init(const ADC_ConfigType * Config_Ptr)
+>
+>3. The ADC_ConfigType structure should be declared like that:
+> typedef struct{
+>  ADC_ReferenceVolatge ref_volt;
+>  ADC_Prescaler prescaler;
+> }ADC_ConfigType;
+> ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
+> Check the target datasheet to gets the values.
+>
+>4. ADC driver should configure to operate using the internal reference voltage 2.56 
+>voltage and prescaler F_CPU/8.
+
+
+**GPIO Driver Requirements**
 1. Use the Same GPIO driver implemented in the course.
 LCD Driver Requirements
 2. Use the Same LCD driver implemented in the course with 8-bits data mode.
@@ -71,10 +82,13 @@ RS → PD0
 RW → GROUND
 E → PD2
 Data Bus → all PORTC pins.
-Temperature Sensor Driver Requirements
+
+
+**Temperature Sensor Driver Requirements**
 1. Use the same Temperature Sensor driver implemented in the course.
 2. Connect the LM35 temperature sensor to ADC channel 2.
-DC-Motor Driver Requirements
+
+**DC-Motor Driver Requirements**
 1. Implement a full DC-Motor Driver.
 2. The DC Motor has 2 functions:
 a. void DcMotor_Init(void)
@@ -97,7 +111,9 @@ DcMotor_State data type should be declared as enum or uint8.
 0 → 100. For example, if the input is 50, The motor should rotate with 
 50% of its maximum speed.
 • Return: None
-PWM Driver Requirements
+
+
+**PWM Driver Requirements**
 1. No need to implement a full driver. Just use the same PWM Timer0 function 
 implemented in the course. You will implement a full timer driver in the final project 
 2. The driver has one function:
