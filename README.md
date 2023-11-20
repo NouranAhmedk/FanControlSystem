@@ -63,13 +63,13 @@ model as follow:**
 >
 >3. The ADC_ConfigType structure should be declared like that:
 >   
->  typedef struct{
+>    typedef struct{
 >
->  ADC_ReferenceVolatge ref_volt;
+>    ADC_ReferenceVolatge ref_volt;
 >
->  ADC_Prescaler prescaler;
+>    ADC_Prescaler prescaler;
 >
->  }ADC_ConfigType;
+>    }ADC_ConfigType;
 >
 > ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
 > Check the target datasheet to gets the values.
