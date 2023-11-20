@@ -23,14 +23,18 @@ temperature is displayed on the LCD.**
 
 **6. The microcontroller will continuously monitor the temperature and based on the 
 temperature value, the microcontroller will drive the fan like that:**
- a. If the temperature is less than 30C turn off the fan.
- b. If the temperature is greater than or equal 30C turn on the fan with 25% of its 
+ 1. If the temperature is less than 30C turn off the fan.
+ 
+ 2. If the temperature is greater than or equal 30C turn on the fan with 25% of its 
  maximum speed.
- c. If the temperature is greater than or equal 60C turn on the fan with 50% of its 
+ 
+ 3. If the temperature is greater than or equal 60C turn on the fan with 50% of its 
  maximum speed.
- d. If the temperature is greater than or equal 90C turn on the fan with 75% of its 
+ 
+ 4. If the temperature is greater than or equal 90C turn on the fan with 75% of its 
  maximum speed.
- e. If the temperature is greater than or equal 120C turn on the fan with 100% of its 
+ 
+ 5. If the temperature is greater than or equal 120C turn on the fan with 100% of its 
  maximum speed.
  
 **7. The main principle of the circuit is to switch on/off the fan connected to DC motor based 
