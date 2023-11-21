@@ -127,3 +127,6 @@ model as follow:**
 >   -Inputs:
 >        - duty_cycle: The required duty cycle percentage of the generated PWM signal. Its value should be >from 0 → 100
 >   - Return: None
+
+**Project Image**
+<img width="1163" alt="image" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/f8a34e61-cda0-480e-a6dc-2eb0f50b07b4">
