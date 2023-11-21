@@ -68,40 +68,40 @@ model as follow:**
 >    ADC_ReferenceVolatge ref_volt;
 >    ADC_Prescaler prescaler;
 >    }ADC_ConfigType;
->
 >   ```
->    ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
->    Check the target datasheet to gets the values.
+>     ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
+>     Check the target datasheet to gets the values.
 >
 >5. ADC driver should configure to operate using the internal reference voltage 2.56 
 >voltage and prescaler F_CPU/8.
 
 
 **GPIO Driver Requirements**
-1. Use the Same GPIO driver implemented in the course.
-LCD Driver Requirements
-2. Use the Same LCD driver implemented in the course with 8-bits data mode.
-3. Connect the LCD control pins and 8-bits data pins as follow:
-RS → PD0
-RW → GROUND
-E → PD2
-Data Bus → all PORTC pins.
+>1. Use the Same GPIO driver implemented in the course.
 
+**LCD Driver Requirements**
+>2. Use the Same LCD driver implemented in the course with 8-bits data mode.
+>3. Connect the LCD control pins and 8-bits data pins as follow:
+> ```
+> RS → PD0
+> RW → GROUND
+> E → PD2
+> Data Bus → all PORTC pins.
+> ```
 
 **Temperature Sensor Driver Requirements**
-1. Use the same Temperature Sensor driver implemented in the course.
-2. Connect the LM35 temperature sensor to ADC channel 2.
+> 1. Use the same Temperature Sensor driver implemented in the course.
+> 2. Connect the LM35 temperature sensor to **ADC channel 2**.
 
 **DC-Motor Driver Requirements**
-1. Implement a full DC-Motor Driver.
-2. The DC Motor has 2 functions:
-a. void DcMotor_Init(void)
-• Description
-➢ The Function responsible for setup the direction for the two 
-motor pins through the GPIO driver.
-➢ Stop at the DC-Motor at the beginning through the GPIO driver.
-• Inputs: None
-• Return: None
+>1. Implement a full DC-Motor Driver.
+>2. The DC Motor has 2 functions:
+>  - a. void DcMotor_Init(void)
+>     - Description
+>       - The Function responsible for setup the direction for the two motor pins through the GPIO driver. 
+>       - Stop at the DC-Motor at the beginning through the GPIO driver.
+>     - Inputs: None
+>     - Return: None
 b. void DcMotor_Rotate(DcMotor_State state,uint8 speed)
 • Description:
 ➢ The function responsible for rotate the DC Motor CW/ or A-CW or 
