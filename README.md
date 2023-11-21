@@ -109,7 +109,7 @@ model as follow:**
 >     - Inputs:
 >       - state: The required DC Motor state, it should be CW or A-CW or stop.
 >         **DcMotor_State** data type should be declared as **enum** or **uint8**.
->       - speed: decimal value for the required motor speed, it should be from 0 → 100. For example, if > >         the input is 50, The motor should rotate with 50% of its maximum speed.
+>       - speed: decimal value for the required motor speed, it should be from 0 → 100. For example, if        the input is 50, The motor should rotate with 50% of its maximum speed.
 >     - Return: None
 
 
