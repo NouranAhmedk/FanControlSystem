@@ -69,8 +69,8 @@ model as follow:**
 >    ADC_Prescaler prescaler;
 >    }ADC_ConfigType;
 >   ```
->     ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
->     Check the target datasheet to gets the values.
+>   ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
+>   Check the target datasheet to gets the values.
 >
 >5. ADC driver should configure to operate using the internal reference voltage 2.56 
 >voltage and prescaler F_CPU/8.
