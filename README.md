@@ -54,26 +54,26 @@ model as follow:**
 <img width="519" alt="layer" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/8357daa2-89ba-4105-a428-25e49cda18f3">
 
 **ADC Driver Requirements**
->1. Implement a full ADC driver with the configuration technique based on the polling
->design. You need to modify the ADC_init function implemented in the ADC session to 
->take a pointer to the configuration structure with type ADC_ConfigType.
+>1. Implement a **full ADC driver with the configuration technique based on the polling
+>design**. You need to modify the **ADC_init** function implemented in the ADC session to 
+>take **a pointer to the configuration structure with type ADC_ConfigType.**
 >
 >2. The function declaration should be:
->void ADC_init(const ADC_ConfigType * Config_Ptr)
+>   **void ADC_init(const ADC_ConfigType * Config_Ptr)**
 >
->3. The ADC_ConfigType structure should be declared like that:
+>3. The **ADC_ConfigType** structure should be declared like that:
 >
->   ```
+>```
 >    typedef struct{
 >    ADC_ReferenceVolatge ref_volt;
 >    ADC_Prescaler prescaler;
 >    }ADC_ConfigType;
->   ```
->   ADC_ ReferenceVolatge and ADC_Prescaler are types defined as uint8 or enum.
->   Check the target datasheet to gets the values.
+>```
+>    **ADC_ ReferenceVolatge** and **ADC_Prescaler** are types defined as uint8 or enum.
+>    Check the target datasheet to gets the values.
 >
->5. ADC driver should configure to operate using the internal reference voltage 2.56 
->voltage and prescaler F_CPU/8.
+>4. ADC driver should configure to operate using the **internal reference voltage 2.56 
+>voltage and prescaler F_CPU/8.**
 
 
 **GPIO Driver Requirements**
@@ -102,35 +102,29 @@ model as follow:**
 >       - Stop at the DC-Motor at the beginning through the GPIO driver.
 >     - Inputs: None
 >     - Return: None
-b. void DcMotor_Rotate(DcMotor_State state,uint8 speed)
-• Description:
-➢ The function responsible for rotate the DC Motor CW/ or A-CW or 
-stop the motor based on the state input state value.
-➢ Send the required duty cycle to the PWM driver based on the 
-required speed value.
-• Inputs:
-➢ state: The required DC Motor state, it should be CW or A-CW or stop.
-DcMotor_State data type should be declared as enum or uint8.
-➢ speed: decimal value for the required motor speed, it should be from 
-0 → 100. For example, if the input is 50, The motor should rotate with 
-50% of its maximum speed.
-• Return: None
+>  - b. void DcMotor_Rotate(DcMotor_State state,uint8 speed)
+>     - Description:
+>       - The function responsible for rotate the DC Motor CW/ or A-CW or stop the motor based on the >state input state value.
+>       - Send the required duty cycle to the PWM driver based on the required speed value.
+>     - Inputs:
+>       - state: The required DC Motor state, it should be CW or A-CW or stop.
+>         **DcMotor_State** data type should be declared as **enum** or **uint8**.
+>       - speed: decimal value for the required motor speed, it should be from 0 → 100. For example, if > >         the input is 50, The motor should rotate with 50% of its maximum speed.
+>     - Return: None
 
 
 **PWM Driver Requirements**
-1. No need to implement a full driver. Just use the same PWM Timer0 function 
-implemented in the course. You will implement a full timer driver in the final project 
-2. The driver has one function:
-void PWM_Timer0_Start(uint8 duty_cycle)
-• Description:
-➢ The function responsible for trigger the Timer0 with the PWM Mode.
-➢ Setup the PWM mode with Non-Inverting.
-➢ Setup the prescaler with F_CPU/8.
-➢ Setup the compare value based on the required input duty cycle
-➢ Setup the direction for OC0 as output pin through the GPIO driver.
-➢ The generated PWM signal frequency will be 500Hz to control the DC 
-Motor speed.
-• Inputs:
-➢ duty_cycle: The required duty cycle percentage of the generated 
-PWM signal. Its value should be from 0 → 100
-• Return: None
+>1. No need to implement a full driver. Just use the same PWM Timer0 function implemented in the course. >You will implement a full timer driver in the final project 
+>2. The driver has one function:
+>void PWM_Timer0_Start(uint8 duty_cycle)
+> Description:
+> The function responsible for trigger the Timer0 with the PWM Mode.
+> Setup the PWM mode with Non-Inverting.
+> Setup the prescaler with F_CPU/8.
+> Setup the compare value based on the required input duty cycle
+> Setup the direction for OC0 as output pin through the GPIO driver.
+> The generated PWM signal frequency will be 500Hz to control the DC Motor speed.
+> Inputs:
+> duty_cycle: The required duty cycle percentage of the generated 
+>PWM signal. Its value should be from 0 → 100
+>Return: None
