@@ -42,8 +42,7 @@ on temperature value. The DC-Motor rotates in clock-wise direction or stopped ba
 the fan state.**
 
 **8. The LCD should display the temperature value and the fan state continuously like 
-that:**
-<img width="324" alt="temp" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/6009a923-201c-4e3e-b0c9-1a53fb749584">
+that:** <img width="324" alt="temp" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/6009a923-201c-4e3e-b0c9-1a53fb749584">
 
 
 **9. Control the *DC-Motor speed using PWM signal* generated from *Timer0.***
