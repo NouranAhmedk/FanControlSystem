@@ -125,7 +125,7 @@ model as follow:**
 >        - Setup the direction for OC0 as output pin through the GPIO driver.
 >        - The generated PWM signal frequency will be 500Hz to control the DC Motor speed.
 >   -Inputs:
->        - duty_cycle: The required duty cycle percentage of the generated PWM signal. Its value should be >from 0 → 100
+>        - duty_cycle: The required duty cycle percentage of the generated PWM signal. Its value should be from 0 → 100
 >   - Return: None
 
 **Project Image**
