@@ -45,6 +45,7 @@ the fan state.**
 that:**
 <img width="324" alt="temp" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/6009a923-201c-4e3e-b0c9-1a53fb749584">
 
+
 **9. Control the *DC-Motor speed using PWM signal* generated from *Timer0.***
 
 **10. Check this video: https://youtu.be/RFQGjcikfK4**
