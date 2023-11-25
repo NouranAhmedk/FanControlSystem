@@ -131,3 +131,5 @@ model as follow:**
 
 **Project Image**
 <img width="1163" alt="image" src="https://github.com/NouranAhmedk/FanControlSystem/assets/105202599/f8a34e61-cda0-480e-a6dc-2eb0f50b07b4">
+
+
